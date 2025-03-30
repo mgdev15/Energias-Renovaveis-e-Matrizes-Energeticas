@@ -1,0 +1,258 @@
+body, html{
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(90deg, rgb(75, 163, 137), rgb(70, 158, 117), rgb(52, 167, 109), rgb(82, 185, 128), rgb(141, 245, 93));
+    display: flex;
+    flex-direction: column;
+}
+
+html::-webkit-scrollbar{
+    width: 12px;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(168, 163, 8);
+}
+
+html::-webkit-scrollbar-track{
+    background-color: rgb(20, 83, 8);
+}
+
+header{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 10px black;
+    backdrop-filter: grayscale(50%);
+    border-radius: 5px;
+}
+
+h1{
+    box-shadow: 0px 0px 5px rgb(37, 133, 37);
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 0px 0px 2px black;
+    background-color: rgb(2, 78, 25);
+    font-size: 2.5em;
+    color: #fff;
+    font-family: Helvetica, "Arial", sans-serif;
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+h1:hover{
+    box-shadow: 0px 0px 25px rgb(37, 133, 37);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.chooseGame{
+    width: 400px;
+    height: 330px;
+    position: relative;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+iframe{
+    box-shadow: 0px 0px 15px black;
+    height: 330px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu Mono", "Arial", sans-serif;
+    background-color: rgb(165, 165, 245);
+    margin-top: 24px;
+    text-align: center;
+}
+
+/**************** Game Blocks ******************/
+
+#game1Div{
+    text-align: center;
+    z-index: 1;
+    border-radius: 20px;
+    font-size: 2em;
+    font-family: "Press Start 2P", "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image: linear-gradient(90deg, rgb(226, 181, 55), rgb(255, 145, 0));
+    height: 100%;
+    width: 100%;
+    transition: color 0.6s ease-in-out, box-shadow 0.8s ease-in-out;
+}
+
+#game1Div::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(90deg, rgb(121, 59, 57), rgb(99, 6, 99));
+    width: 100%;
+    height: 0%;
+    transition: height 0.3s linear;
+}
+
+#game1Div:hover{
+    box-shadow: 0px 0px 15px white;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+#game1Div:active{
+    scale: 1.02;
+}
+
+#game1Div:hover::after{
+    height: 100%;
+}
+
+/******************************************************/
+
+#game2Div{
+    text-align: center;
+    z-index: 1;
+    border-radius: 20px;
+    font-size: 2em;
+    font-family: "Press Start 2P", "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-image: linear-gradient(90deg, rgb(81, 151, 231), rgb(25, 90, 173));
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    transition: color 0.6s ease-in-out, box-shadow 0.8s ease-in-out;
+}
+
+#game2Div::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(90deg, rgb(241, 147, 84), rgb(165, 51, 51));
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s linear;
+}
+
+#game2Div:hover{
+    box-shadow: 0px 0px 15px white;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+#game2Div:hover::after{
+    width: 100%;
+}
+
+/******************************************************/
+
+#game3Div{
+    text-align: center;
+    z-index: 1;
+    border-radius: 20px;
+    font-size: 2em;
+    font-family: "Press Start 2P", "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #4eff19;
+    background-image: linear-gradient(90deg, rgb(255, 95, 55), rgb(177, 7, 7));
+    height: 100%;
+    width: 100%;
+    transition: color 0.6s ease-in-out, box-shadow 0.8s ease-in-out;
+}
+
+#game3Div::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background-image: linear-gradient(grey, black);
+    width: 100%;
+    height: 0%;
+    transition: height 0.3s linear;
+}
+
+#game3Div:hover{
+    box-shadow: 0px 0px 15px white;
+    cursor: pointer;
+    color: rgb(0, 255, 242);
+}
+
+#game3Div:hover::after{
+    height: 100%;
+}
+
+span{
+    animation: NeonLights 0.8s infinite;
+}
+
+/******************************************************/
+
+@media screen and (max-width: 1000px){
+
+    h1{
+        font-size: 1.7em;
+    }
+
+    main{
+        display: block;
+        position: relative;
+        margin: auto;
+        margin-top: -10px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .chooseGame{
+        width: 300px;
+        height: 250px;
+    }
+
+    iframe{
+        width: 300px;
+        height: 250px;
+    }
+
+}
+
+/******************************************************/
+
+@keyframes NeonLights{
+
+    0%{color: rgb(28, 78, 95)}
+    10%{color: rgb(172, 169, 26)}
+    20%{color: rgb(121, 14, 14)}
+    30%{color: rgb(21, 124, 17)}
+    40%{color: rgb(10, 95, 91)}
+    50%{color: rgb(36, 38, 124)}
+    60%{color: rgb(99, 22, 92)}
+    70%{color: rgb(69, 23, 87)}
+    80%{color: rgb(95, 59, 26)}
+    90%{color: rgb(65, 24, 92)}
+    100%{color: rgb(66, 18, 38)}
+
+}
